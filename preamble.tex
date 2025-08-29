@@ -1,0 +1,384 @@
+%================================
+% PACKAGES
+%================================
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usepackage{graphicx}
+\usepackage{textgreek}
+\usepackage{venndiagram}
+\usepackage{bm}
+\usepackage{multirow}
+\usepackage{mathtools}
+\usepackage{import}
+\usepackage{xcolor}
+\usepackage{varwidth}
+\usepackage{varwidth}
+\usepackage{etoolbox}
+\usepackage{nameref}
+\usepackage{multicol,array}
+\usepackage{comment}
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{chngcntr}
+\usepackage{titletoc}
+\usepackage{tablists}
+\usepackage{bbm}
+\usepackage{tabu}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{setspace}
+\usepackage[italicdiff]{physics}
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+\usepackage[most,many,breakable]{tcolorbox}
+\usepackage[varbb]{newpxmath}
+\usepackage[hidelinks]{hyperref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% COLORS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\definecolor{myg}{RGB}{56, 140, 70}
+\definecolor{myb}{RGB}{45, 111, 177}
+\definecolor{myr}{RGB}{199, 68, 64}
+\definecolor{myformulabg}{HTML}{D1C6EF}
+\definecolor{myformti}{HTML}{5E44A5}
+\definecolor{myformfr}{HTML}{482F8D}
+\definecolor{myprooffr}{HTML}{323295}
+\definecolor{mytheorembg}{HTML}{F2F2F9}
+\definecolor{mytheoremfr}{HTML}{00007B}
+\definecolor{mylemmabg}{HTML}{F5EEFA}
+\definecolor{mylemmafr}{HTML}{8019C0}
+\definecolor{myexamplebg}{HTML}{F2FBF8}
+\definecolor{myexamplefr}{HTML}{88D6D1}
+\definecolor{myexampleti}{HTML}{2A7F7F}
+\definecolor{mydefinitbg}{HTML}{E5E5FF}
+\definecolor{mydefinitfr}{HTML}{0000c8}
+\definecolor{notesgreen}{RGB}{0,162,0}
+\definecolor{myp}{RGB}{197, 92, 212}
+\definecolor{mygr}{HTML}{2C3338}
+\definecolor{myred}{RGB}{127,0,0}
+\definecolor{myyellow}{RGB}{169,121,69}
+
+%================================
+% THEOREM BOX
+%================================
+
+\tcbuselibrary{theorems,skins,hooks}
+\newtcbtheorem[number within=section]{Theorem}{Theorem}
+{%
+	enhanced,
+	breakable,
+	colback = mytheorembg,
+	frame hidden,
+	boxrule = 0sp,
+	borderline west = {2pt}{0pt}{mytheoremfr},
+	sharp corners,
+	detach title,
+	before upper = \tcbtitle\par\smallskip,
+	coltitle = mytheoremfr,
+	fonttitle = \bfseries\sffamily,
+	description font = \mdseries,
+	separator sign none,
+	segmentation style={solid, mytheoremfr},
+}
+{th}
+
+\tcbuselibrary{theorems,skins,hooks}
+\newtcbtheorem[number within=chapter]{theorem}{Theorem}
+{%
+	enhanced,
+	breakable,
+	colback = mytheorembg,
+	frame hidden,
+	boxrule = 0sp,
+	borderline west = {2pt}{0pt}{mytheoremfr},
+	sharp corners,
+	detach title,
+	before upper = \tcbtitle\par\smallskip,
+	coltitle = mytheoremfr,
+	fonttitle = \bfseries\sffamily,
+	description font = \mdseries,
+	separator sign none,
+	segmentation style={solid, mytheoremfr},
+}
+{th}
+
+\tcbuselibrary{theorems,skins,hooks}
+\newtcolorbox{Theoremcon}
+{%
+	enhanced
+	,breakable
+	,colback = mytheorembg
+	,frame hidden
+	,boxrule = 0sp
+	,borderline west = {2pt}{0pt}{mytheoremfr}
+	,sharp corners
+	,description font = \mdseries
+	,separator sign none
+}
+
+%================================
+% LEMMA
+%================================
+
+\tcbuselibrary{theorems,skins,hooks}
+\newtcbtheorem[number within=section]{Lemma}{Lemma}
+{%
+	enhanced,
+	breakable,
+	colback = mylemmabg,
+	frame hidden,
+	boxrule = 0sp,
+	borderline west = {2pt}{0pt}{mylemmafr},
+	sharp corners,
+	detach title,
+	before upper = \tcbtitle\par\smallskip,
+	coltitle = mylemmafr,
+	fonttitle = \bfseries\sffamily,
+	description font = \mdseries,
+	separator sign none,
+	segmentation style={solid, mylemmafr},
+}
+{th}
+
+%================================
+% AXIOM BOX
+%================================
+
+\tcbuselibrary{theorems,skins,hooks}
+\newtcbtheorem[number within=section]{Axiom}{Axiom}
+{%
+	enhanced,
+	breakable,
+	colback = mytheorembg,
+	frame hidden,
+	boxrule = 0sp,
+	borderline west = {2pt}{0pt}{mytheoremfr},
+	sharp corners,
+	detach title,
+	before upper = \tcbtitle\par\smallskip,
+	coltitle = mytheoremfr,
+	fonttitle = \bfseries\sffamily,
+	description font = \mdseries,
+	separator sign none,
+	segmentation style={solid, mytheoremfr},
+}
+{ax}
+
+%================================
+% EXAMPLE BOX
+%================================
+
+\newtcbtheorem[number within=section]{Example}{Example}
+{%
+	colback = myexamplebg
+	,breakable
+	,colframe = myexamplefr
+	,coltitle = myexampleti
+	,boxrule = 1pt
+	,sharp corners
+	,detach title
+	,before upper=\tcbtitle\par\smallskip
+	,fonttitle = \bfseries
+	,description font = \mdseries
+	,separator sign none
+	,description delimiters parenthesis
+}
+{ex}
+
+
+%================================
+% DEFINITION BOX
+%================================
+
+\newtcbtheorem[number within=section]{Definition}{Definition}{enhanced,
+	before skip=2mm,after skip=2mm, colback=mytheorembg,colframe=blue,boxrule=0.5mm,
+	attach boxed title to top left={xshift=1cm,yshift*=1mm-\tcboxedtitleheight}, varwidth boxed title*=-3cm,
+	boxed title style={frame code={
+					\path[fill=mydefinitfr]
+					([yshift=-1mm,xshift=-1mm]frame.north west)
+					arc[start angle=0,end angle=180,radius=1mm]
+					([yshift=-1mm,xshift=1mm]frame.north east)
+					arc[start angle=180,end angle=0,radius=1mm];
+					\path[left color=mydefinitfr,right color=mydefinitfr,
+						middle color=mydefinitfr]
+					([xshift=-2mm]frame.north west) -- ([xshift=2mm]frame.north east)
+					[rounded corners=1mm]-- ([xshift=1mm,yshift=-1mm]frame.north east)
+					-- (frame.south east) -- (frame.south west)
+					-- ([xshift=-1mm,yshift=-1mm]frame.north west)
+					[sharp corners]-- cycle;
+				},interior engine=empty,
+		},
+	fonttitle=\bfseries,
+	title={#2},#1}{def}
+
+
+%================================
+% QUESTION BOX
+%================================
+
+\newtcolorbox{question}
+{
+	breakable,
+	colback=white,
+	colframe=mygr,
+	fonttitle=\bfseries,
+	title=Question,
+	boxed title size=title,
+	boxed title style={%
+			sharp corners,
+			rounded corners=northwest,
+			colback=tcbcolframe,
+			boxrule=0pt,
+		},
+	underlay boxed title={%
+			\path[fill=tcbcolframe] (title.south west)--(title.south east)
+			to[out=0, in=180] ([xshift=5mm]title.east)--
+			(title.center-|frame.east)
+			[rounded corners=\kvtcb@arc] |-
+			(frame.north) -| cycle;
+		}
+}
+
+%================================
+% SOLUTION BOX
+%================================
+
+\newtcolorbox{solution}
+{
+	breakable,
+	colback=white,
+	colframe=teal,
+	fonttitle=\bfseries,
+	title=Solution,
+	boxed title size=title,
+	boxed title style={%
+			sharp corners,
+			rounded corners=northwest,
+			colback=tcbcolframe,
+			boxrule=0pt,
+		},
+	underlay boxed title={%
+			\path[fill=tcbcolframe] (title.south west)--(title.south east)
+			to[out=0, in=180] ([xshift=5mm]title.east)--
+			(title.center-|frame.east)
+			[rounded corners=\kvtcb@arc] |-
+			(frame.north) -| cycle;
+		}
+}
+
+%================================
+% FORMULA BOX
+%================================
+
+\newtcbtheorem[number within=section]{Formula}{Formula}
+{%
+	colback = myformulabg
+	,breakable
+	,colframe = myformfr
+	,coltitle = mytheoremfr
+	,boxrule = 1pt
+	,sharp corners
+	,detach title
+	,before upper=\tcbtitle\par\smallskip
+	,fonttitle = \bfseries
+	,description font = \mdseries
+	,separator sign none
+	,description delimiters parenthesis
+}
+{fm}
+
+%================================
+% NOTE BOX
+%================================
+
+\newtcolorbox{note}
+{
+	breakable,
+	colback=mytheorembg,
+	coltitle=white,
+	frame hidden,
+	boxrule = 0sp,
+	fonttitle=\bfseries,
+	title=Note,
+	boxed title size=title,
+	boxed title style={%
+			sharp corners,
+			rounded corners=northwest,
+			colback=tcbcolframe,
+			boxrule=0pt,
+		},
+	underlay boxed title={%
+			\path[fill=tcbcolframe] (title.south west)--(title.south east)
+			to[out=0, in=180] ([xshift=5mm]title.east)--
+			(title.center-|frame.east)
+			[rounded corners=\kvtcb@arc] |-
+			(frame.north) -| cycle;
+		}
+}
+
+%================================
+% PROOF BOX
+%================================
+
+\newtcolorbox{proof}
+{
+	breakable,
+	colback=mytheorembg,
+	coltitle=white,
+	colframe=myprooffr,
+	boxrule = 0sp,
+	fonttitle=\bfseries,
+	title=Proof,
+	boxed title size=title,
+	boxed title style={%
+			sharp corners,
+			rounded corners=northwest,
+			colback=tcbcolframe,
+			boxrule=0pt,
+		},
+	underlay boxed title={%
+			\path[fill=tcbcolframe] (title.south west)--(title.south east)
+			to[out=0, in=180] ([xshift=5mm]title.east)--
+			(title.center-|frame.east)
+			[rounded corners=\kvtcb@arc] |-
+			(frame.north) -| cycle;
+		}
+}
+
+%================================
+% MACROS
+%================================
+
+\setlist[itemize]{leftmargin=*}
+\setstretch{1.25}
+\newcommand \fl [1] {\lfloor #1 \rfloor}
+\newcommand \fp [1] {\{ #1 \}}
+\newcommand \conj [1] {\bar{#1}}
+\newcommand{\dtcup}{\; \dot\cup \;}
+\newcommand{\cconj}[1]{\overline{#1}}
+\newcommand*{\Perm}[2]{{}^{#1}\!P_{#2}}
+\newcommand*{\Comb}[2]{{}^{#1}C_{#2}}
+\newcommand{\RN}{\mathbb{R}}
+\newcommand{\CN}{\mathbb{C}}
+\newcommand{\IN}{\mathbb{Z}}
+\newcommand{\THTA}{\(\theta\)}
+\newcommand{\PI}{\(\pi\)}
+\newcommand{\PRB}{\(\mathbb{P}\)}
+\newcommand{\LHO}{L'Hôpital's }
+\newcommand{\nt}[1]{\begin{note}{#1}\end{note}}
+\newcommand{\prf}[1]{\begin{proof}{#1}\end{proof}}
+\newcommand{\qs}[1]{\begin{question}{#1}\end{question}}
+\newcommand{\sol}[1]{\begin{solution}{#1}\end{solution}}
+\newcommand{\ex}[2]{\begin{Example}{#1}{}#2\end{Example}}
+\newcommand{\fm}[2]{\begin{Formula}{#1}{}#2\end{Formula}}
+\newcommand{\dfn}[2]{\begin{Definition}[colbacktitle=red!75!black]{#1}{}#2\end{Definition}}
+\newcommand{\thm}[2]{\begin{Theorem}{#1}{}#2\end{Theorem}}
+\newcommand{\lemma}[2]{\begin{Lemma}{#1}{}#2\end{Lemma}}
+\newcommand{\ax}[2]{\begin{Axiom}{#1}{}#2\end{Axiom}}
