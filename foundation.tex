@@ -80,10 +80,270 @@ carry out an exchange which determines the price of a product.}
 {
 A \emph{perfectly competitive market} has many buyers and sellers, so that
 no single buyer or seller has any impact on price. Most agricultural markets are
-close to being perfectly competitive.
+close to being perfectly competitive. This should be contrasted with \emph{market
+power} (a.k.a \emph{monopoly power}), which refers to the control that a seller
+has over the price of the product they sell. To make analysis easier, we begin
+the study of microeconomics by assuming perfectly competitive markets.
 
 Some markets contain many producers but are \emph{non-competitive}; that is, individual firms can
-jointly affect the price. The world oil market is one example. Since the early
+jointly affect the price. The world oil market is one such example. Since the early
 1970s, that market has been dominated by the OPEC cartel.
+}
+
+\subsection{Demand}
+{
+\dfn{Demand}{The demand represents how much of a good consumers are \emph{willing} and \emph{able} to buy
+at different possible prices in a particular time period.}
+
+There are two keywords in the definition; willing and able. `Willing' means that consumers want to
+buy the product. `Able' means they can afford the product. For instance, consider the demand for
+Ferraris. You may want to buy a Ferrari, but can you afford it? If not, your desire to buy one
+will not show up as demand for Ferraris.
+
+The demand for a product is usually represented by a curve with the possible prices on the \(y\)-axis
+and the quantity demanded on the \(x\)-axis.
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[scale=1.25]
+        % Axes
+        \draw[->] (0,0) -- (5,0) node[right]{Quantity};
+        \draw[->] (0,0) -- (0,4) node[above]{Price};
+
+        % Demand curve D
+        \draw[thick,blue] (0.5,3.5) to[out=-60,in=150] (4,0.5) node[right] {$D$};
+
+        % P1 line
+        \draw[dashed] (0,1.75) node[left]{$P_{1}$} -- (2,1.75);
+
+        % Q1 line
+        \draw[dashed] (2,0) node[below]{$Q_{1}$} -- (2,1.75);
+
+        % Intersection point
+        \fill (2,1.75) circle (2pt);
+    \end{tikzpicture}
+    \caption{Demand Curve}
+    \label{fig:dcurve1}
+\end{figure}
+
+\subsubsection{Why Does the Demand Curve Slope Downward?}
+{
+There are two explanations for the downward slope of the demand curve:
+\begin{enumerate}
+    \item Law of Demand
+    \item Law of Diminishing Marginal Benefit
+\end{enumerate}
+
+\dfn{Law of Demand}{There exists a negative causal relationship between price and quantity demanded.
+As the price of a good decreases, the quantity of the good demanded increases, ceteris paribus.}
+
+\dfn{Law of Diminishing Marginal Benefit}{Consumers buy goods because
+it provides them with some benefit or satisfaction known as \emph{utility}. The greater the
+quantity of a good consumed, the greater the utility. However, the extra benefit
+provided by each additional unit increases by smaller and smaller amounts.
+The extra benefit that you get from each additional unit of something you buy is called the
+\emph{marginal benefit} or \emph{marginal utility} (marginal means extra or additional).
+Since each successive unit of the good you consume produces less and less benefit,
+you will be willing to buy each extra unit only if it has a lower and lower price.}
+}
+
+\subsubsection{Non-Price Determinants of Demand}
+{
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[scale=0.95]
+
+    % Axes
+    \draw[->] (0,0) -- (8,0) node[right] {$Q$};
+    \draw[->] (0,0) -- (0,6) node[above] {$P$};
+
+    % Demand curves
+    \draw[thick,black] (0.65,5.5) -- (3.65,1) node[right] {$D_3$};
+    \draw[thick,black] (2.15,5.5) -- (5.15,1) node[right] {$D_1$};
+    \draw[thick,black] (4.15,5.5) -- (7.15,1) node[right] {$D_2$};
+
+    % Price line P1
+    \draw[dashed,black] (0,3.5) -- (7,3.5) node[left=6.6cm] {$P_1$};
+
+    % Intersections with demand curves
+    \draw[dashed,black] (2,0) node[below] {$Q_3$} -- (2,3.5);
+    \draw[dashed,black] (3.5,0) node[below] {$Q_1$} -- (3.5,3.5);
+    \draw[dashed,black] (5.5,0) node[below] {$Q_2$} -- (5.5,3.5);
+    \fill (2,3.5) circle (3pt);
+    \fill (3.5,3.5) circle (3pt);
+    \fill (5.5,3.5) circle (3pt);
+
+    % Arrows indicating shift
+    \draw[->,black,thick] (2.75,4.2) -- (1.75,4.2) node[midway,above] {fall};
+    \draw[->,black,thick] (2.9,4.8) -- (4.25,4.8) node[midway,above] {rise};
+
+    % Origin
+    \node[below left] at (0,0) {0};
+    \end{tikzpicture}
+    
+    \caption{Shift in Demand}
+    \label{fig:dcurve2}
+\end{figure}
+
+The non-price determinants of demand are factors other than price which influence demand. These
+are the factors assumed to be constant by the ceteris paribus assumption in the law of demand.
+Changes in the determinants of demand cause shifts in the demand curve; the entire demand
+curve moves to the right or left. The factors that cause a shift in the demand curve are:
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item Income (Normal Goods)
+        \item Income (Inferior Goods)
+        \item Preferences
+        \item Price of Substitute Goods
+        \item Price of Complementary Goods
+        \item Demographic Changes
+    \end{enumerate}
+\end{multicols}
+
+\dfn{Normal Goods}{A good is a normal good when demand for it increases
+in response to an increase in consumer income. Most goods are normal goods.}
+\dfn{Inferior Goods}{A good is an inferior good when demand for it decreases
+in response to an increase in consumer income. Examples of
+inferior goods are second-hand clothes, used cars, and bus tickets.}
+
+\dfn{Substitute Goods}{Goods are substitutes when an increase in
+the price of one leads to an increase in the quantity demanded of the other.
+Coca-cola and Pepsi are examples of substitute goods.}
+\dfn{Complementary Goods}{Goods are complements when an increase in the price of one leads to a decrease
+in the quantity demanded of the other. Petroleum and automobiles are
+examples of complementary goods.}
+
+\newpage
+
+It is important to distinguish between movements on or along a demand curve, and shifts of a
+demand curve. Whenever the price of a good changes, ceteris paribus, it leads to a movement along the demand curve,
+this is called \emph{change in quantity demanded}.
+By contrast, any change in a non-price determinant
+of demand results in a shift in the entire demand curve, this is called a \emph{change in demand}.
+To distinguish between these two changes,
+different terminology is used. The phrase \emph{change in demand}
+refers to shifts in the demand curve, while the phrase \emph{change in the
+quantity demanded} refers to movements along the demand curve.
+}
+}
+
+\subsection{Supply}
+{
+\dfn{Supply}{The supply represents how much of a good producers are \emph{willing} and \emph{able} to produce at
+different possible prices in a particular time period.}
+
+The supply of a product is usually represented by a curve with the possible prices on the \(y\)-axis
+and the quantity supplied on the \(x\)-axis.
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[scale=1.25]
+        % Axes
+        \draw[->] (0,0) -- (5,0) node[right]{Quantity};
+        \draw[->] (0,0) -- (0,4) node[above]{Price};
+
+        % Supply curve S
+        \draw[thick,red,domain=0:4,samples=200,smooth,variable=\x]
+        plot (\x,{(0.1*\x*\x + 0.5*\x)+0.3725});
+
+        % P1 line
+        \draw[dashed] (0,1.75) node[left]{$P_{1}$} -- (2,1.75);
+
+        % Q1 line
+        \draw[dashed] (2,0) node[below]{$Q_{1}$} -- (2,1.75);
+
+        % Intersection point
+        \fill (2,1.75) circle (2pt);
+    \end{tikzpicture}
+    \caption{Supply Curve}
+    \label{fig:scurve1}
+\end{figure}
+
+\subsubsection{Why Does the Supply Curve Slope Upward?}
+{
+Higher prices generally mean that a firm's profits increase, and so the firm faces an incentive
+to produce more output. Lower prices mean lower
+profitability, and the incentive facing the firm is
+to produce less. Therefore, there results a positive
+relationship between price and quantity supplied: the
+higher the price, the greater the quantity supplied.
+}
+
+\subsubsection{Vertical Supply Curve}
+{
+While it is true that the supply curve generally slopes upward, a few important exceptions
+remain wherein the supply curve is vertical.
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[scale=1.25]
+        % Axes
+        \draw[->] (0,0) -- (5,0) node[right]{Quantity};
+        \draw[->] (0,0) -- (0,4) node[above]{Price};
+
+        % Supply curve S
+        \draw[black] (2.5,0) -- (2.5,3.75) node[above, right] {$S$};
+
+        % Origin
+        \node[below left] at (0,0) {0};
+    \end{tikzpicture}
+    \caption{Supply Curve}
+    \label{fig:scurve2}
+\end{figure}
+
+Consider a movie theatre. No matter what happens, the number of people a theatre can accomodate
+remains fixed. No matter how high the price, it is not
+possible to increase the number of seats in a short period of time. Another example for
+this is original antiques and paintings. There is a fixed quantity of the good because there
+is no possibility of ever producing more of it.
+}
+
+\subsubsection{Non-Price Determinants of Supply}
+{
+\begin{enumerate}
+    \item Cost of Resources
+    \item Technology
+    \item Taxes
+    \begin{itemize}
+        \item A \emph{tax} is a mandatory fee levied on individuals and firms by the government
+        to improve infrastructure and quality of life
+        \item Therefore, the imposition of a new tax (or an increase of an existing tax) is
+        equivalent to an increase in production cost
+    \end{itemize}
+
+    \item Subsidies
+    \begin{itemize}
+        \item A \emph{subsidy} is a payment made to a firm by the government, and so has the
+        opposite effect of a tax
+        \item The introduction of a subsidy (or an increase of an existing subsidy) is equivalent
+        to a fall in production costs
+    \end{itemize}
+
+    \item Price of Related Goods (Competitive Supply)
+    \begin{itemize}
+        \item Competitive supply of two products refers to them competing for the use of the same resources,
+        and producing more of one means producing less of the other
+        \item For example, a farmer, who can grow wheat or corn, chooses to grow wheat. If the price
+        of corn increases, the farmer may switch to corn production as this is now more profitable, resulting
+        in a fall in wheat supply and a leftward shift of the supply curve
+    \end{itemize}
+
+    \item Price of Related Goods (Joint Supply)
+    \begin{itemize}
+        \item Joint supply of two or more products refers to production of goods that are derived from a single
+        product. Hence, it is not possible to produce more of either product without producing more of its source
+        \item For example, butter and skimmed milk are both produced from whole milk; petrol and diesel
+        are produced from crude oil
+    \end{itemize}
+
+    \item Number of Firms
+    \item `Shocks' or Unpredictable Events
+    \item Producer Expectations
+\end{enumerate}
+
+Similar to demand, any change in price produces a change in quantity supplied, shown as a movement on the supply curve.
+Any change in a determinant of supply (other than price) produces a change in supply, represented by a
+shift of the whole supply curve.
+}
 }
 }
