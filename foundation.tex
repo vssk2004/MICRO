@@ -346,4 +346,302 @@ Any change in a determinant of supply (other than price) produces a change in su
 shift of the whole supply curve.
 }
 }
+
+\subsection{Market Equilibrium}
+{
+Until now, market demand and market supply have been considered separately to show
+the quantities consumers and firms are willing and able to buy and sell at each
+price. However, this is not how much they actually buy and sell. Consider the following
+\emph{demand and supply schedule} showing various prices and the quantities of
+chocolate bars bought and sold at those prices:
+
+\begin{center}
+\begin{tabular}{|>{\centering\arraybackslash}m{3cm}|>{\centering\arraybackslash}m{4cm}|>{\centering\arraybackslash}m{4cm}|}
+\hline
+\rowcolor{lightgray}
+\textbf{Price of chocolate bars (\$)} & 
+\textbf{Quantity of chocolate bars demanded (per week)} & 
+\textbf{Quantity of chocolate bars supplied (per week)} \\
+\hline
+5 & 4000 & 12000 \\
+\hline
+4 & 6000 & 10000 \\
+\hline
+3 & 8000 & 8000 \\
+\hline
+2 & 10000 & 6000 \\
+\hline
+1 & 12000 & 4000 \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines=left,
+    xlabel={quantity of chocolate bars (thousands per week)},
+    ylabel={price of chocolate bars (\$)},
+    xmin=0, xmax=14,
+    ymin=0, ymax=6,
+    xtick={0,2,4,6,8,10,12,14},
+    ytick={0,1,2,3,4,5},
+    grid=none,
+    width=12cm,
+    height=8cm,
+    enlargelimits=false
+]
+
+% Supply curve (red)
+\addplot[red, thick, mark=*] coordinates {
+    (4,1) (6,2) (8,3) (10,4) (12,5)
+};
+
+% Demand curve (blue)
+\addplot[blue, thick, mark=*] coordinates {
+    (4,5) (6,4) (8,3) (10,2) (12,1)
+};
+
+% Market equilibrium point
+\addplot[only marks, mark=*, mark size=2pt] coordinates {(8,3)};
+\node[right] at (axis cs:9,3) {market equilibrium};
+
+% Equilibrium price (horizontal dashed line)
+\draw[dashed, green!70!black] (axis cs:0,3) -- (axis cs:8,3);
+
+% Equilibrium quantity (vertical dashed line)
+\draw[dashed, green!70!black] (axis cs:8,0) -- (axis cs:8,3);
+\draw[->, thick, black] (axis cs:9,3) -- (axis cs:8.35,3);
+
+% Surplus line
+\draw[dashed] (axis cs:4,5) -- (axis cs:12,5);
+\draw[dashed] (axis cs:6,4) -- (axis cs:10,4);
+\node at (axis cs:8,4.5) {surplus};
+
+% Shortage line
+\draw[dashed] (axis cs:4,1) -- (axis cs:12,1);
+\draw[dashed] (axis cs:6,2) -- (axis cs:10,2);
+\node at (axis cs:8,1.5) {shortage};
+
+% Labels for supply and demand curves
+\node[right] at (axis cs:12,5) {S};
+\node[right] at (axis cs:12,1) {D};
+
+\end{axis}
+\end{tikzpicture}
+
+Here, there are three important observations:
+\begin{enumerate}
+    \item There is only one price at which the quantity demanded is equal to the quantity supplied: \$3.
+    Here, the quantity demanded (\Qd) is 8000 units and quantity supplied (\Qs) is also 8000
+    units.
+    \item At a higher price, say \$4, quantity supplied (10000 bars) is greater than quantity demanded
+    (6000 bars). Hence, there is a \emph{surplus} (\emph{excess supply}) of 4000 bars.
+    \item At a lower price, say \$2, quantity demanded (10000 bars) is larger than quantity supplied (6000
+    bars). Hence, there is a \emph{shortage} (\emph{excess demand}) of 4000 bars.
+\end{enumerate}
+
+Suppose that the price is initially \$5. What will happen?
+If the price is \$5, then \Qd is 4000 bars while the \Qs is 12000 bars. There is a surplus
+of 8000 bars. With unsold output of 8000 bars, producers will lower prices to encourage consumers to buy
+more. As the price falls, \Qd becomes larger. Furthermore, there is downward
+pressure on the price which falls until \Qd equals \Qs and the surplus
+is eliminated. The opposite happens if the price is initially \$1.
+The producers notice that the supply is ``quickly'' sold, and so they begin
+raising the prices.
+
+It is, therefore, imperative to understand that the existence of a shortage or surplus in
+a free market will cause the price to change so that \Qd is equal to \Qs.
+
+\dfn{Market Equilibrium}{\emph{Equilibrium} is a market phenomenon wherein the quantity demanded is equal to the quantity supplied
+(\Qd equals \Qs) and there is no tendency for
+the price to change. In a \emph{market disequilibrium}, there is excess demand (shortage) or excess supply (surplus),
+and the forces of demand and supply cause the price to change until the market reaches equilibrium.}
+
+\subsubsection{Changes in Market Equilibrium}
+{
+\begin{enumerate}
+\item Increase in Demand
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.71]{DEM1}
+        \label{fig:dem1}
+    \end{figure}
+Initially, the market is in equilibrium at point A. Then, a change in a non-price determinant of demand causes an increase in demand
+shifting the demand curve to the right. As demand increases and price remains the same, there is a shift to point B. 
+There is excess demand (equal to \(b-a\)) at the current price P\(_1\). Point B is a disequilibrium which causes a shortage,
+thus exerting upward pressure on price. Hence, the price increases causing a movement along D\(_\text{2}\) and the excess 
+demand is eliminated. Finally, the market reaches equilibrium at point C. At C, there is a higher equilibrium quantity (Q\(_2\)) and
+a higher equilibrium price (P\(_2\)).
+
+\item Increase in Supply
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.71]{SUPP1}
+        \label{fig:supp1}
+    \end{figure}
+
+\item Decrease in Demand
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.71]{DEM2}
+        \label{fig:dem2}
+    \end{figure}
+
+\item Decrease in Supply
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.71]{SUPP2}
+        \label{fig:supp2}
+    \end{figure}
+\end{enumerate}
+}
+}
+
+\subsection{Linear Demand and Supply Functions}
+{
+
+\subsubsection{Linear Demand Function and Its Graph}
+{
+A demand function has the form:
+\[Q_d = a - bP\]
+where \Qd is the quantity demanded, \(a\) is the \emph{\(x\)-intercept}, \(b\) is the
+slope, and P is the price.
+
+Note that \(a\) is the \emph{\(x\)-intercept} not the
+\emph{\(y\)-intercept} and it represents all the variables that are held
+constant under the ceteris paribus assumption, i.e. the non-price determinants
+of demand.
+
+The slope is calculated as: \(\Delta Q_d \divisionsymbol \Delta P\).
+It's interpretation is that for every 1 unit change in the price (\(P\)), the
+quantity demanded (\(Q_d\)) changes by \(b\) units.
+
+Suppose that the demand function \(Q_d = 14 - 2P\) is given. It can be plotted as:
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines=middle,
+    xlabel={$Q$},
+    ylabel={$P$},
+    xlabel style={at={(axis description cs:1.025,0)}, anchor=west}, % right of x-axis
+    ylabel style={at={(axis description cs:0,1.025)}, anchor=south}, % above y-axis
+    xmin=0, xmax=16,
+    ymin=0, ymax=8,
+    xtick={0,2,4,6,8,10,12,14,16},
+    ytick={0,1,2,3,4,5,6,7,8},
+    width=10cm,
+    height=7cm,
+    domain=0:16,
+    samples=100
+]
+
+% Demand curve: P = (10 - Q)/2
+\addplot[blue, thick] {(14 - x)/2};
+\end{axis}
+\node[below left] at (0,0) {0};
+\end{tikzpicture}
+\end{center}
+
+
+Now, we can analyse the parameters \(a\) and \(b\). Firstly, \(a\) represents the
+non-price determinants of demand. Therefore, if there is a change in any of 
+the non-price determinants of demand (\(a\)), then the curve will shift left or
+right parallelly.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{LDF1}
+    \caption{Change in \(a\) causing a shift of the demand curve}
+\end{figure}
+
+\par\noindent
+Finally, \(b\) represents the slope of the demand curve. The demand curve becomes flatter
+as the absolute value of \(b\) increases. Why? Shouldn't it become steeper? No. It needs
+to be understood that the graph is not of the form \(y = mx + c\), it is of the
+form \(x = a - by\). When the absolute value of \(b\) increases from \(b_1\) to \(b_2\), it means that for a 1 unit
+change in price, the quantity demanded now changes by \(b_2\) units rather than \(b_1\)
+units where \(|b_2| > |b_1|\); \Qd changes by an amount more than before.
+
+Consider the following example where the demand function changes from \(Q_d = 14 - 2P\)
+to \(Q_d = 14 - 4P\):
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{LDF2}
+    \caption{Change in \(b\) causing a change in the slope of the demand curve}
+\end{figure}
+}
+
+\subsubsection{Linear Supply Function and Its Graph}
+{
+The supply function has the form:
+\[Q_s = c - dP\]
+where \Qs is the quantity supplied, \(c\) is the \emph{\(x\)-intercept}, \(d\) is the
+slope, and P is the price.
+
+Suppose the supply function \(Q_s = 2 + 2P\) is given. It can be plotted as:
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines=middle,
+    xlabel={$Q$},
+    ylabel={$P$},
+    xlabel style={at={(axis description cs:1.025,0)}, anchor=west}, % right of x-axis
+    ylabel style={at={(axis description cs:0,1.025)}, anchor=south}, % above y-axis
+    xmin=0, xmax=16,
+    ymin=0, ymax=8,
+    xtick={0,2,4,6,8,10,12,14,16},
+    ytick={0,1,2,3,4,5,6,7,8},
+    width=8cm,
+    height=6cm,
+    domain=0:16,
+    samples=100
+]
+
+% Demand curve: P = (10 - Q)/2
+\addplot[red, thick] {(x-2)/2};
+\end{axis}
+\node[below left] at (0,0) {0};
+\end{tikzpicture}
+\end{center}
+
+Here, the parameters \(c\) and \(d\) represent the same things as \(a\) and \(b\) in the
+demand function. Firstly, \(c\) is the \emph{\(x\)-intercept} and represents all of the
+non-price determinants of supply. If there is a change in any of the non-price determinants
+of supply, then \(c\) changes and this causes a shift of the supply curve left or right
+parallelly.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.65]{LSF1}
+    \caption{Change in \(c\) causing a shift of the supply curve}
+\end{figure}
+
+\par\noindent
+Then, \(d\) is the slope of the supply curve. The supply curve becomes flatter
+as the absolute value of \(d\) increases. Why? Shouldn't it become steeper? No. It needs
+to be understood that the graph is not of the form \(y = mx + c\), it is of the
+form \(x = a - by\). When the absolute value of \(d\) increases from \(d_1\) to \(d_2\), it means that for a 1 unit
+change in price, the quantity demanded now changes by \(d_2\) units rather than \(d_1\)
+units where \(|d_2| > |d_1|\); \Qs changes by an amount more than before for the same
+change in price.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{LSF2}
+    \caption{Change in \(d\) causing a change in the slope of the supply curve}
+\end{figure}
+}
+
+\subsubsection{Market Equilibrium}
+{
+The demand and supply functions can be combined to find market equilibrium:
+\[\begin{aligned}
+Q_d &= 14 - 2P \\
+Q_s &= 2 + 2P \\
+\end{aligned}\]
+\[\text{Equilibrium Condition: } \; Q_d = Q_s\]
+\[14-2P = 2+2P \Rightarrow 4P = 12 \Rightarrow P^* = 3\]
+\[Q^* = 14-2(3) = 2+2(3) \Rightarrow Q^* = 8\]
+}
+}
 }

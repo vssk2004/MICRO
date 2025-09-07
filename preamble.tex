@@ -35,6 +35,10 @@
 \usepackage{float}
 \usepackage{setspace}
 \usepackage{caption}
+\usepackage{geometry}
+\usepackage{colortbl}
+\usepackage{pgfplots}
+\usepackage{xspace}
 \usepackage[italicdiff]{physics}
 \usepackage[ruled,vlined,linesnumbered]{algorithm2e}
 \usepackage[most,many,breakable]{tcolorbox}
@@ -360,6 +364,7 @@
 
 \setlist[itemize]{leftmargin=*}
 \setstretch{1.25}
+\pgfplotsset{compat=1.18}
 \newcommand \fl [1] {\lfloor #1 \rfloor}
 \newcommand \fp [1] {\{ #1 \}}
 \newcommand \conj [1] {\bar{#1}}
@@ -370,6 +375,8 @@
 \newcommand{\RN}{\mathbb{R}}
 \newcommand{\CN}{\mathbb{C}}
 \newcommand{\IN}{\mathbb{Z}}
+\newcommand{\Qd}{Q\(_\text{d}\)\xspace}
+\newcommand{\Qs}{Q\(_\text{s}\)\xspace}
 \newcommand{\THTA}{\(\theta\)}
 \newcommand{\PI}{\(\pi\)}
 \newcommand{\PRB}{\(\mathbb{P}\)}
