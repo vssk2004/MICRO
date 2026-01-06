@@ -65,7 +65,7 @@ individual economic units into two broad groups, according to function,
 \emph{buyers} and \emph{sellers}.
 
 Buyers purchase goods and services. Usually, there are two types of buyers:
-consumers and firms. Consumers purchase regular goods and service while firms
+consumers and firms. Consumers purchase regular goods and services while firms
 purchase labor, capital, and raw materials that they use to produce goods and services.
 
 Sellers sell goods and services. Usually, there are three types of sellers: firms,
@@ -341,8 +341,8 @@ is no possibility of ever producing more of it.
     \item Producer Expectations
 \end{enumerate}
 
-Similar to demand, any change in price produces a change in quantity supplied, shown as a movement on the supply curve.
-Any change in a determinant of supply (other than price) produces a change in supply, represented by a
+Similar to demand, any change in price produces a \emph{change in quantity supplied}, shown as a movement on the supply curve.
+Any change in a determinant of supply (other than price) produces a \emph{change in supply}, represented by a
 shift of the whole supply curve.
 }
 }
@@ -446,7 +446,7 @@ of 8000 bars. With unsold output of 8000 bars, producers will lower prices to en
 more. As the price falls, \Qd becomes larger. Furthermore, there is downward
 pressure on the price which falls until \Qd equals \Qs and the surplus
 is eliminated. The opposite happens if the price is initially \$1.
-The producers notice that the supply is ``quickly'' sold, and so they begin
+The producers notice that the supply is quickly sold, and so they begin
 raising the prices.
 
 It is, therefore, imperative to understand that the existence of a shortage or surplus in
@@ -639,9 +639,283 @@ The demand and supply functions can be combined to find market equilibrium:
 Q_d &= 14 - 2P \\
 Q_s &= 2 + 2P \\
 \end{aligned}\]
-\[\text{Equilibrium Condition: } \; Q_d = Q_s\]
+\[
+\boxed{\text{Equilibrium Condition: } \; Q_d = Q_s}
+\]
 \[14-2P = 2+2P \Rightarrow 4P = 12 \Rightarrow P^* = 3\]
 \[Q^* = 14-2(3) = 2+2(3) \Rightarrow Q^* = 8\]
 }
 }
+
+\subsection{Market Efficiency}
+{
+\dfn{Allocative Efficiency}{Refers to producing the combination of goods mostly wanted by society. Hence, nobody
+can be better off without making others worse off; the benefits from consumption are maximised for the 
+whole of society.}
+
+\dfn{Productive Efficiency}{Refers to producing goods by using the fewest possible resources (producing at 
+the lowest possible cost).}
+
+Productive efficiency is a \emph{necessary condition} for allocative efficiency. It means that if
+there is no productive efficiency, there is no allocative efficiency.
+These conditions are known as \emph{economic efficiency} or \emph{Pareto Optimality}.
+
+\subsubsection{Consumer Surplus and Producer Surplus}
+{
+\dfn{Consumer Surplus}{Consumer surplus is defined as the highest price consumers are willing to pay for 
+a good minus the price actually paid.}
+
+\dfn{Producer Surplus}{Producer surplus is defined as the price received
+by firms for selling their good minus the lowest price that they are willing to accept to produce the good.}
+
+Before understanding the concept of surplus, it is important to understand why the supply curve is called
+the marginal cost curve. Recall that the demand curve is also known as the marginal benefit (MB) curve. Now,
+imagine that you are firm producing in a perfectly competitive market. If you are a firm, and you need
+to make one more unit of a good, then the cost to you of an additional good is the marginal cost of that good.
+To make the good, you need to recover, at a minimum, your marginal cost. Therefore, the supply curve 
+is the marginal cost curve because the supply curve is a relationship that tells us the minimum amount
+that a firm is willing to accept for selling a unit of a good.
+
+\begin{center}    
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines=middle,
+    xlabel={$Q$},
+    x label style={at={(axis description cs:1.05,0)},anchor=west},
+    ylabel={$P$},
+    y label style={at={(axis description cs:0,1.05)},anchor=south},
+    xmin=0, xmax=14,
+    ymin=0, ymax=14,
+    xtick={3,5.5},
+    xticklabels={$Q_b$, $Q_e$},
+    ytick={4,6.5,9},
+    yticklabels={$P_b$,$P_e$,$P_b$},
+    width=10cm, height=7cm,
+    enlargelimits=false,
+    axis line style={->},
+    tick style={draw=none},
+    clip=false
+]
+
+% Demand curve (D = MB)
+\addplot[domain=0:12, thick, black] {12-x} node[pos=0.9, above right] {$D=MB$};
+
+% Supply curve (S = MC)
+\addplot[domain=0:12, thick, black] {x+1} node[above] {$S=MC$};
+
+% Equilibrium point
+\node[circle, fill=black, inner sep=2pt] at (axis cs:5.5,6.5) {};
+
+% Vertical dashed lines for Qb and Qe
+\draw[dashed, black] (axis cs:3,0) -- (axis cs:3,9);
+\draw[dashed, black] (axis cs:5.5,0) -- (axis cs:5.5,6.5);
+
+% Horizontal dashed lines
+\draw[dashed, black] (axis cs:0,6.5) -- (axis cs:5.5,6.5);
+\draw[dashed, black] (axis cs:0,9) -- (axis cs:3,9);
+\draw[dashed, black] (axis cs:0,4) -- (axis cs:3,4);
+
+% Shaded consumer surplus
+\path[fill=green!20, opacity=0.5] (axis cs:0,12) -- (axis cs:0,6.5) -- (axis cs:5.5,6.5) -- cycle;
+\node at (axis cs:1.75,8) {consumer};
+\node at (axis cs:1.75,7.3) {surplus};
+
+% Shaded producer surplus
+\path[fill=green!20, opacity=0.5] (axis cs:0,6.5) -- (axis cs:0,1) -- (axis cs:5.5,6.5) -- cycle;
+\node at (axis cs:1.75,5.5) {producer};
+\node at (axis cs:1.75,4.8) {surplus};
+
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+At the point of competitive market equilibrium, \emph{social surplus}, defined as the sum of consumer and producer
+surplus, is maximum. If \(Q_b\) were produced, then the sum of consumer surplus and producer surplus would be
+smaller as \(Q_b\) would be the cut-off of the surplus.
+
+If we interpret the demand curve as the marginal benefit curve and the supply curve as the marginal cost curve, then
+the point of equilibrium would be reached where \(MB = MC\). The equality of MB with MC tells us that the extra benefit
+to society of getting one more unit of the good is equal to the extra cost to society of producing one more unit of
+the good. Here, society has allocated the ``correct'' amount of resources to produce the good, and is producing the quantity
+of the good that is mostly wanted by society. Therefore, allocative efficiency is achieved.
+
+If \(MB > MC\), then the benefit from producing an additional unit of the good is greater than the cost of producing
+the additional unit. Hence, the additional unit must be produced to achieve the maximum benefit. Vice-versa when \(MB < MC\).
+}
+}
+}
+
+
+\newpage
+
+
+\section{Elasticity}
+
+\dfn{Elasticity}{Elasticity is a measure of the responsiveness of a variable to changes in price or any of the variable’s
+determinants.}
+
+\subsection{Price Elasticity of Demand}
+{
+\dfn{Price Elasticity of Demand (PED)}{PED is a measure of the responsiveness of quantity demanded of a good to a
+change in its price. In general, if there is a large responsiveness of quantity demanded, demand
+is referred to as being \emph{price elastic}; if there is a small responsiveness, demand is \emph{price inelastic}.}
+
+From the law of demand, we know that the higher the price, the lower the quantity demanded. We now examine \emph{by how much}
+quantity responds to change in price.
+
+\fm{Price Elasticity of Demand}{\[\begin{aligned}
+    \text{PED} &= \frac{\text{percentage change in quantity demanded of good X}}{\text{percentage change in price of good X}} \\
+    &= \frac{\frac{\Delta Q_x}{Q_x} \times 100}{\frac{\Delta P_x}{P_x} \times 100} = \frac{\Delta Q_x}{Q_x} \cdot \frac{P_x}{\Delta P_x}
+\end{aligned}\]}
+
+Since price and quantity demanded are negatively (indirectly) related, the PED is a negative number. Why? Any increase in price
+results in a decrease in quantity demanded. However, it is common practice to \emph{drop the sign and consider PED as a positive
+number}.
+
+It is important to understand that PED measures changes in percentages, as it would be meaningless to think about changes in prices or
+quantities in absolute terms. Therefore, it outputs information
+on the relative size of the change.
+
+\ex{Calculating PED}{Suppose consumers buy 6000 DVD players when the price is \$255 per unit, and they buy
+5000 DVD players when the price is \$300. What is the PED?}
+\sol{\[\text{PED} = \frac{\frac{6000-5000}{5000}}{\frac{255-300}{300}} = \frac{\frac{1}{5}}{-\frac{45}{300}} = -1.33 \ \text{or} \ 1.33\]}
+}
+
+\subsection{Range of PED}
+{
+\begin{center}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{3.75cm}|
+                >{\raggedright\arraybackslash}p{4cm}|
+                >{\raggedright\arraybackslash}p{6cm}|}
+\hline
+\textbf{Value of \textit{PED}} & \textbf{Classification} & \textbf{Interpretation} \\
+\hline
+\multicolumn{3}{|l|}{\textbf{Frequently encountered cases}} \\
+\hline
+$0 < PED < 1$
+& inelastic demand 
+& quantity demanded is relatively unresponsive to price \\
+\hline
+$1 < PED < \infty$
+& elastic demand 
+& quantity demanded is relatively responsive to price \\
+\hline
+\multicolumn{3}{|l|}{\textbf{Special cases}} \\
+\hline
+$PED = 1$ & unit elastic demand & percentage change in quantity demanded equals percentage change in price \\
+\hline
+$PED = 0$ & perfectly inelastic demand & quantity demanded is completely unresponsive to price \\
+\hline
+$PED = \infty$ & perfectly elastic demand & quantity demanded is infinitely responsive to price \\
+\hline
+\end{tabular}
+\end{center}
+
+In general, the larger the absolute value of PED, the greater the responsiveness of quantity demanded to a change in price.
+PED for most goods and services is greater than zero and less than infinite, and other than exactly
+one. The cases of unit elastic, perfectly inelastic and perfectly elastic demand are rarely encountered in
+practice; however, they have important applications in economic theory.
+}
+
+\subsection{PED along a Linear Demand Curve}
+{
+Along any downward-sloping, straight-line demand curve, the PED varies (changes) as we move along the curve.
+Consider the following linear demand curve:
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines=middle,
+    xlabel={$Q$},
+    ylabel={$P$},
+    xlabel style={at={(axis description cs:1.025,0)}, anchor=west}, % right of x-axis
+    ylabel style={at={(axis description cs:0,1.025)}, anchor=south}, % above y-axis
+    xmin=0, xmax=120,
+    ymin=0, ymax=60,
+    xtick={10,20,30,40,50,60,70,80,90,100,110},
+    ytick={5,10,15,20,25,30,35,40,45,50,55},
+    width=11cm,
+    height=7.5cm,
+    domain=0:100,
+    samples=100
+]
+
+% Demand curve
+\addplot[blue, thick] {(100-x)/2};
+\end{axis}
+\node[below left] at (0,0) {0};
+\end{tikzpicture}
+\end{center}
+
+The function representing the curve is: \(Q = 100 - 2P\). When price is low and quantity is high,
+demand is inelastic; as we move up the demand curve towards higher prices and lower quantities, demand
+becomes more and more elastic. The reason behind the changing PED along a linear demand curve is the
+amounts of quantity and price.
+
+When the price is \$45, the \(Q_d\) is 10 units, and at \$40, \(Q_d\) is 20 units. Therefore,
+PED is 4. Then, moving from \$30 to \$25 results in a 10 unit change, hence PED is 1. Finally,
+moving from \$15 to \$10 results in a 10 unit decrease, which results in a PED of \(0.25\).
+
+\subsubsection{Slope vs. PED}
+{
+The PED needs to be contrasted with the slope of a demand curve. Since we define a demand curve as
+\(Q = A - bP\), the slope is \(\frac{\Delta Q}{\Delta P} = -b\). However, PED is (from Formula 3.1)
+\(\frac{\Delta Q}{Q} \cdot \frac{P}{\Delta P} = \frac{\Delta Q}{\Delta P} \cdot \frac{P}{Q} =
+\text{slope} \times \frac{P}{Q}\).
+}
+}
+
+\subsection{PED and Total Revenue}
+{
+Total revenue (TR) is defined as the total amount of money a firm receives by selling
+its product; it is calculated as:
+\[\text{TR} = \text{Price} \times \text{Quantity Sold} = P \times Q\]
+The relationship between PED and total revenue is important for firms when making pricing decisions
+to maximise revenue.
+
+\medskip
+To begin, we know that \(P\) and \(Q_d\) are inversely related. Therefore, when the price increases,
+\(Q_d\) falls. Here, one variable increases while the other decreases. The effect on total revenue
+depends on the relative size of the change in each variable, which is exactly the PED. Hence, we have:
+\begin{enumerate}
+    \item If demand is \emph{elastic} (\(PED > 1\)), a decrease in price leads to an increase in total revenue,
+    and an increase in price leads to a decrease in total revenue.
+    \item If demand is \emph{inelastic} (\(PED < 1\)), a decrease in price leads to a decrease in total revenue,
+    and an increase in price leads to an increase in total revenue.
+    \item If demand is \emph{unit elastic} (\(PED = 1\)), a change in price does not affect total revenue.
+\end{enumerate}
+
+Let's understand this by using Calculus. Total revenue is given by:
+\[\text{TR} = P \times Q_d(P)\]
+Taking the derivative of total revenue with respect to price, we get marginal revenue:
+\[MR = \dv{TR}{P} = 1 \cdot Q_d + P \cdot \dv{Q_d}{P}\]
+\[MR = Q_d + P \cdot \dv{Q_d}{P} = Q_d\left(1 + \dv{Q_d}{P} \cdot \frac{P}{Q_d}\right)\]
+Notice that \(\dv{Q_d}{P} \cdot \frac{P}{Q_d}\) is just the PED. Furthermore, \(\dv{Q_d}{P}\) will be negative because it
+is the slope of the demand curve. Therefore,
+\[MR = Q_d(1 - PED)\]
+
+Here, we can see that when \(PED > 1\) (elastic demand), \(MR\) is negative; when \(PED < 1\) (inelastic demand), \(MR\) is positive;
+and when \(PED = 1\) (unit elastic demand), \(MR\) is zero. This is precisely why total revenue
+behaves the way it does with respect to changes in price. To summarise:
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{l c c}
+\hline
+ & \textbf{P--$Q_D$ relationship} & \textbf{Impact on total revenue} \\
+\hline
+Inelastic 
+& $1\% \uparrow P \;\Rightarrow\; <1\% \downarrow \text{ in } Q_D$ 
+& $\text{TR} \uparrow$ \\[6pt]
+
+Elastic 
+& $1\% \uparrow P \;\Rightarrow\; >1\% \downarrow \text{ in } Q_D$ 
+& $\text{TR} \downarrow$ \\[6pt]
+
+Unit elastic 
+& $1\% \uparrow P \;\Rightarrow\; 1\% \downarrow \text{ in } Q_D$ 
+& $\text{TR unchanged}$ \\
+\hline
+\end{tabular}
+\end{table}
 }
